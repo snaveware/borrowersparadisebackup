@@ -43,7 +43,7 @@ module.exports = class BackupsController {
                 RequestHandler.throwError(404,'request for latest backup returned an empty array instead of one backup object')()
             }
 
-            RequestHandler.sendSuccess(req.requestId,res,latestBackup[0])
+            RequestHandler.sendSuccess(req.requestId,res,latestBackup[0].data)
         } catch (error) {
             RequestHandler.sendError(req.requestId,res,error)
         }
