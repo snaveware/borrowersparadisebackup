@@ -5,8 +5,8 @@ const sysConfig = require('./Config');
 
 let Logger;
 
-if(sysConfig.NODE_ENV === 'development')
-{
+// if(sysConfig.NODE_ENV === 'development')
+// {
     const logFormat = printf(({level, message, timestamp}) => {
         return `${timestamp} ${level}: ${message}`;
     }) 
@@ -24,18 +24,18 @@ if(sysConfig.NODE_ENV === 'development')
         
     })
 
-}else{
+// }else{
 
-    Logger = createLogger({
-        level:sysConfig.LOGGINGLEVEL,
-        transports: [
-            new transports.File({filename: 'logs/combined.log',handleExceptions:true}),
-            new transports.File({filename:'logs/errors.log',level:'error',handleExceptions:true}),
-            new transports.File({filename:'logs/warnings.log',level:'warn',handleExceptions:true})
-        ],
-        format: format.json()
-    })
-}
+//     Logger = createLogger({
+//         level:sysConfig.LOGGINGLEVEL,
+//         transports: [
+//             new transports.File({filename: 'logs/combined.log',handleExceptions:true}),
+//             new transports.File({filename:'logs/errors.log',level:'error',handleExceptions:true}),
+//             new transports.File({filename:'logs/warnings.log',level:'warn',handleExceptions:true})
+//         ],
+//         format: format.json()
+//     })
+// }
 
 
 module.exports = Logger;
