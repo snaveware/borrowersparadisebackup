@@ -4,6 +4,7 @@ const Logger = require('./Logger')
 const sysConfig = require('./Config')
 
 function DBConnect(){
+    console.log('database connection called')
     Logger.info('connecting to database...')
     
     const dbString = sysConfig.DB_CONNECTION_STRING
