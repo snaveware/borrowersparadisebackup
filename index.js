@@ -83,14 +83,14 @@ app.get('/health', (req,res)=>{
 RequestHandler.sendSuccess(req.requestId,res,"Borrower's Paradise Backup Server is Up and Running")
 })
 
-const {sign} = require('jsonwebtoken')
+// const {sign} = require('jsonwebtoken')
 
-const token  = sign({
-    description: "A KEY TO AUTHENTICATE WITH BORROWER'S PARADISE BACKUP SERVER",
-    exp: Math.floor(Date.now() / 1000) + (86400 * 365)
-},sysConfig.SECRET)
+// const token  = sign({
+//     description: "A KEY TO AUTHENTICATE WITH BORROWER'S PARADISE BACKUP SERVER",
+//     exp: Math.floor(Date.now() / 1000) + (86400 * 365)
+// },sysConfig.SECRET)
 
-console.log("A Token: ",token)
+// console.log("A Token: ",token)
 
 /**
  * Routers

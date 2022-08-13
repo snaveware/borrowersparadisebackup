@@ -1,7 +1,7 @@
 const {createLogger, transports, format} = require('winston')
 const {combine, timestamp, printf, prettyPrint } = format;
 
-const sysConfig = require('./config');
+const sysConfig = require('./Config');
 
 let Logger;
 
