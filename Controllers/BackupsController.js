@@ -1,4 +1,4 @@
-const { Logger } = require('../Logger')
+const  Logger  = require('../Logger')
 const {Backup} = require('../models')
 const RequestHandler = require('../RequestHandler')
 
